@@ -1,16 +1,31 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
 
-* {
-  box-sizing: border-box;
+  .button {
+    @apply bg-pink-500 text-white text-center px-5 py-2 rounded-full hover:bg-pink-600
+  }
+
+  .button-secondary {
+    @apply bg-black text-white text-center px-5 py-1 rounded-full hover:bg-stone-600
+  }
+
+  .default-bg {
+    @apply w-full flex justify-center py-36
+  }
+
+  .default-card {
+    @apply p-10 w-96 rounded-lg shadow-lg bg-white
+  }
+
+  .default-header {
+    @apply font-bold text-2xl mb-3
+  }
+
+  .default-input {
+    @apply rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-rose-600 focus:border-transparent
+  }
+  
 }
