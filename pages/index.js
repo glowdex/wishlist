@@ -12,9 +12,10 @@ export default function Home() {
           perfect to put on your profile for the holidays! 🎁
         </p>
         <div className="flex mt-8">
-            <a href="/sign-in" className="button rounded-lg">
-                create your own
-            </a>
+            <Link href="/sign-in">
+            <button className="button rounded-lg">
+                create your own </button>
+            </Link>
         </div>  
       </div>
       <div className="my-20 md:my-0 md:col-span-1 px-10 flex justify-center">

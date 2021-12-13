@@ -65,7 +65,7 @@ export default function EditList({ user }) {
           <h2 className="default-header">edit wishlist</h2>
           <p className="text-sm text-gray-500"> add items to your wishlist! </p>
         </div>
-        <pre>inputValue: "{query}"</pre>
+        <pre>inputValue: {query}</pre>
         <AsyncSelect loadOptions={fetchOptions} cacheOptions />
 
         <ul className="flex flex-col divide divide-y">
