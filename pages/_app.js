@@ -49,14 +49,14 @@ function MyApp({ Component, pageProps }) {
         <Link href="/edit-list">
           <button className="font-bold w-full sm:w-36"> edit list </button>
         </Link>
-        <Link href={`/${user?.user_metadata.username}`}>
+        <Link href={`/list/${user?.user_metadata.username}`}>
           <button className="button-secondary font-bold w-full sm:w-36"> ✨ my list ✨ </button>
         </Link>
         <Link href="/settings">
           <button className="font-bold w-full sm:w-36"> settings </button>
         </Link>
         {user?.user_metadata.username 
-        ? <p className="text-xs mt-3 w-full text-center sm:"> your public list url is <br/> <b>wishlist-sigma.vercel.app/{user.user_metadata.username} </b></p> 
+        ? <p className="text-xs mt-3 w-full text-center sm:"> your public list url is <br/> <b>wishlist-sigma.vercel.app/list/{user.user_metadata.username} </b></p> 
         : <p className="text-xs"> set your username to get a list url! </p> }
       </nav>
       : null }
