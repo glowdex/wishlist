@@ -4,20 +4,20 @@ import ItemCard from '../components/item-card'
 export default function Home() {
   return (
     <div className="md:grid md:grid-cols-2">
-      <div className="md:col-span-1 px-20 py-36">
+      <div className="md:col-span-1 px-20 pt-36 pb-12 sm:py-36">
         <span className="w-20 h-2 bg-pink-200 dark:bg-white mb-12">
         </span>
         <h1 className="text-6xl font-bold mb-6">
           a list of pretty things ✨
         </h1>
         <p className="text-sm sm:text-base text-gray-700 dark:text-white">
-          a simple, no-fuss, live updating wishlist and inventory list for beauty lovers. <br/>
-          perfect to put on your profile for the holidays! 🎁
+          a simple, no-fuss wishlist for beauty lovers.
+          perfect for sharing on your profile for the holidays! 🎄🎁
         </p>
         <div className="flex mt-8">
             <Link href="/sign-in">
-            <button className="button rounded-lg">
-                create your own </button>
+            <button className="button-secondary">
+                create your own → </button>
             </Link>
         </div>  
       </div>
@@ -35,7 +35,7 @@ export default function Home() {
           <ItemCard product_name="Glam Change Multi Palette 04 UNICORN PINK" brand_name="A.Black" img="https://m.media-amazon.com/images/I/71p96zYLAsL._SY355_.jpg" />
           <ItemCard product_name="Faded Serum for Dark Spots & Discoloration" brand_name="Topicals" img="https://www.sephora.com/productimages/sku/s2457042-main-zoom.jpg?imwidth=630" />
           <ItemCard product_name="Lip Glow 001 Pink" brand_name="DIOR" img="https://m.media-amazon.com/images/I/61ECdMZyAqL._SL1500_.jpg" />
-          <ItemCard product_name="Hydro Boost Water Gel" brand_name="Neutrogena" img="https://ntg-catalog.imgix.net/products/6811047-pack-2101-2.jpg?w=1200&h=1443&sfrm=jpg&fit=crop" />
+          <ItemCard product_name="Hydro Boost Water Gel" brand_name="Neutrogena" img="https://i5.walmartimages.com/asr/8f92ecc1-a167-4e25-8ec5-999457f449a7.295f6134f6e5044cbce68401e68c2ca6.jpeg" />
           <ItemCard product_name="Ink V Shading #1 Almond Brown" brand_name="PERIPERA" img="https://cdn.shopify.com/s/files/1/0087/3539/1806/products/Peripera_ink_v_shading_9.5g_2_types.jpg?v=1584962875" />
         </div>
       </div>

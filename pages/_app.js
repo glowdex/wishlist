@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { supabase } from '../client'
 import { useRouter } from 'next/router'
+import { Toaster } from 'react-hot-toast'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -14,7 +15,7 @@ function MyApp({ Component, pageProps }) {
       handleAuthChange(event, session)
       if (event === 'SIGNED_IN') {
         setAuthenticatedState('authenticated')
-        router.push('/profile')
+        router.push('/settings')
       }
       if (event === 'SIGNED_OUT') {
         setAuthenticatedState('not-authenticated')
@@ -26,7 +27,6 @@ function MyApp({ Component, pageProps }) {
     }
   }, [])
   async function checkUser() {
-    console.log("fired")
     const checkedUser = await supabase.auth.user()
     if (checkedUser) {
       setUser(checkedUser)
@@ -43,24 +43,43 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <div className="h-screen bg-stone-50 overflow-scroll">
-      <nav className="flex justify-between items-center px-16 h-12 fixed w-full bg-white">
-        <Link href="/">
-          <button className="font-bold"> home </button>
+    <div className="h-screen overflow-scroll" style={{backgroundColor:user?.user_metadata.color??"#F5F5F4"}}>
+      {(authenticatedState === "authenticated")
+      ? <nav className="flex flex-wrap mt-4 justify-between items-center px-16 py-3 fixed w-full">
+        <Link href="/edit-list">
+          <button className="font-bold w-full sm:w-36"> edit list </button>
         </Link>
-        {(authenticatedState === "authenticated") 
-        ? (<Link href="/edit-list">
-            <button className="button-secondary font-bold"> ✨ my wishlist ✨ </button>
-          </Link>)
-        : null}
-
-        {(authenticatedState === "authenticated") 
-        ? (<Link href="/profile">
-            <button className="font-bold"> profile </button>
-          </Link>)
-        : null}
+        <Link href={`/list/${user?.user_metadata.username}`}>
+          <button className="button-secondary font-bold w-full sm:w-36"> ✨ my list ✨ </button>
+        </Link>
+        <Link href="/settings">
+          <button className="font-bold w-full sm:w-36"> settings </button>
+        </Link>
+        {user?.user_metadata.username 
+        ? <p className="text-xs mt-3 w-full text-center sm:"> your public list url is <br/> <b>bla.com/list/{user.user_metadata.username} </b></p> 
+        : <p className="text-xs"> set your username to get a list url! </p> }
       </nav>
-      <div className="mt-12">
+      : null }
+      <Toaster 
+              toastOptions={{
+                success: {
+                  style: {
+                    background: '#f5fcde',
+                  },
+                },
+                error: {
+                  style: {
+                    background: '#fcebea',
+                  },
+                },
+                info: {
+                  style: {
+                    background: '#eff8fc',
+                  }
+                }
+              }}
+            />
+      <div className="pt-12 sm:pt-0">
         <Component {...pageProps} />
       </div>
     </div>
