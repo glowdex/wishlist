@@ -4,7 +4,7 @@ import ItemCard from '../components/item-card'
 export default function Home() {
   return (
     <div className="h-screen overflow-scroll" style={{backgroundColor:"#F5F5F4"}}>
-    <div className="md:grid md:grid-cols-2">
+    <div className="md:grid md:grid-cols-2 pt-12">
       <div className="md:col-span-1 px-20 pt-36 pb-12 sm:py-36">
         <span className="w-20 h-2 bg-pink-200 dark:bg-white mb-12">
         </span>

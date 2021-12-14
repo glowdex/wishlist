@@ -84,7 +84,7 @@ export default function Settings({ user }) {
 
   async function signOut() {
     await supabase.auth.signOut()
-    router.push('/sign-in')
+    router.push('/')
   }
 
   return (

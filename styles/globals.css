@@ -4,6 +4,10 @@
 
 @layer components {
 
+  html {
+    @apply text-black
+  }
+
   .button {
     @apply bg-pink-500 text-white text-center px-5 py-2 rounded-full hover:bg-pink-600
   }
@@ -13,7 +17,7 @@
   }
 
   .default-bg {
-    @apply w-full flex justify-center py-36
+    @apply w-full flex justify-center py-36 
   }
 
   .default-card {

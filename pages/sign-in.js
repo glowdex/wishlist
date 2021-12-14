@@ -27,7 +27,7 @@ export default function SignIn({ user }) {
 
   if (submitted) {
     return (
-      <div className="default-bg">
+      <div className="default-bg pt-48">
         <div className="default-card">
           <h1 className="font-bold text-2xl mb-3"> success 🌟</h1>
           <p className="text-sm text-gray-500"> please check your email to sign in! </p>
