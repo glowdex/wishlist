@@ -31,7 +31,7 @@ export default function SignIn({ user }) {
         <div className="default-card">
           <h1 className="font-bold text-2xl mb-3"> success 🌟</h1>
           <p className="text-sm text-gray-500"> please check your email to sign in! </p>
-          <p className="text-xs italic text-gray-500 mt-3"> it might take a few seconds! </p> <Link href="/sign-in"><p className="underline text-xs italic text-gray-500 mt-1">or, try again</p></Link>
+          <p className="text-xs italic text-gray-500 mt-3"> it might take a few seconds! </p> 
           
         </div>
       </div>
@@ -60,7 +60,7 @@ export async function getServerSideProps({ req }) {
   const { user } = await supabase.auth.api.getUserByCookie(req)
 
   if (user) {
-    return { props: {}, redirect: { destination: '/edit-list' } }
+    return { props: {}, redirect: { destination: '/settings' } }
   }
 
   return { props: {} }
