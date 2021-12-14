@@ -39,9 +39,13 @@ export default function Settings({ user }) {
 
   async function updateProfile(e) {
     e.preventDefault()
-    
+
     try {
       setLoading(true)
+
+      if (username === 'settings' || username ==='create-item' || username === 'edit-list' || username === 'sign-in' || username === 'index' || /\s/g.test(username) || /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/.test(username)){
+        throw ({message: 'username is not valid (no space or special chars)'})
+      }
 
       const updates = {
         id: user.id,
@@ -74,6 +78,7 @@ export default function Settings({ user }) {
       router.reload(window.location.pathname)
     } catch(error) {
       toast.error(error.message)
+      setLoading(false)
     }
   }
 

@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }) {
           <button className="font-bold w-full sm:w-36"> settings </button>
         </Link>
         {user?.user_metadata.username 
-        ? <p className="text-xs mt-3 w-full text-center sm:"> your public list url is <br/> <b>bla.com/list/{user.user_metadata.username} </b></p> 
+        ? <p className="text-xs mt-3 w-full text-center sm:"> your public list url is <br/> <b>bla.com/{user.user_metadata.username} </b></p> 
         : <p className="text-xs"> set your username to get a list url! </p> }
       </nav>
       : null }
