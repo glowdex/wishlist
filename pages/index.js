@@ -3,6 +3,7 @@ import ItemCard from '../components/item-card'
 
 export default function Home() {
   return (
+    <div className="h-screen overflow-scroll" style={{backgroundColor:"#F5F5F4"}}>
     <div className="md:grid md:grid-cols-2">
       <div className="md:col-span-1 px-20 pt-36 pb-12 sm:py-36">
         <span className="w-20 h-2 bg-pink-200 dark:bg-white mb-12">
@@ -12,7 +13,7 @@ export default function Home() {
         </h1>
         <p className="text-sm sm:text-base text-gray-700 dark:text-white">
           a simple, no-fuss wishlist for beauty lovers.
-          perfect for sharing on your profile for the holidays! 🎄🎁
+          get a url to share on your profile (perfect for the holidays! 🎄🎁)
         </p>
         <div className="flex mt-8">
             <Link href="/sign-in">
@@ -20,6 +21,9 @@ export default function Home() {
                 create your own → </button>
             </Link>
         </div>  
+        <div className="mt-12">
+          <p className="text-sm">a project by @glowdexapp</p>
+        </div>
       </div>
       <div className="my-20 md:col-span-1 flex justify-center items-center">
         <div className="default-card px-0 py-6"> 
@@ -39,6 +43,7 @@ export default function Home() {
           <ItemCard product_name="Ink V Shading #1 Almond Brown" brand_name="PERIPERA" img="https://cdn.shopify.com/s/files/1/0087/3539/1806/products/Peripera_ink_v_shading_9.5g_2_types.jpg?v=1584962875" />
         </div>
       </div>
+    </div>
     </div>
     )
   }

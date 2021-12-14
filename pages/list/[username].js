@@ -43,7 +43,7 @@ export default function MyList() {
       <div className="default-card p-0 pb-5">
         <div className="pt-10 px-10 flex justify-between">
           <div>
-            <h2 className="default-header mb-1">@{username}&apos;s list</h2>
+            <h2 className="default-header mb-1">@{username}&apos;s list ✨</h2>
             <p className="text-sm text-gray-500 mb-3"> {count&&count} items (sorted A-Z by brand) </p>
           </div>
         </div>
