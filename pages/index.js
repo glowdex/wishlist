@@ -8,6 +8,13 @@ export default function Home() {
     <Head>
       <title>The Get List.</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta
+      property="og:image"
+      content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png"/>
+      <meta
+      name="twitter:card"
+      content="summary || summary_large_image || player || app"
+    />
     </Head>
     <div className="md:grid md:grid-cols-2 pt-12">
       <div className="md:col-span-1 px-8 sm:px-20 pt-36 pb-12 sm:py-36">
