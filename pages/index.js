@@ -6,12 +6,13 @@ export default function Home() {
     <div className="h-screen overflow-scroll" style={{backgroundColor:"#F5F5F4"}}>
     <div className="md:grid md:grid-cols-2 pt-12">
       <div className="md:col-span-1 px-20 pt-36 pb-12 sm:py-36">
-        <span className="w-20 h-2 bg-pink-200 dark:bg-white mb-12">
+        <span className="w-20 h-2 bg-pink-200 mb-12">
+          d
         </span>
         <h1 className="text-6xl font-bold mb-6">
           a list of pretty things ✨
         </h1>
-        <p className="text-sm sm:text-base text-gray-700 dark:text-white">
+        <p className="text-sm text-gray-700">
           a simple, no-fuss wishlist for beauty lovers.
           get a url to share on your profile (perfect for the holidays! 🎄🎁)
         </p>

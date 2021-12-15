@@ -13,10 +13,10 @@ function ItemCard(props) {
           }
         </div>
         <div className="flex-1 pl-1 mr-3">
-            <div className="font-medium dark:text-white">
+            <div className="font-medium">
                 {product_name}
             </div>
-            <div className="text-gray-600 dark:text-gray-200 text-sm">
+            <div className="text-gray-600 text-sm">
                 {brand_name}
             </div>
         </div>
