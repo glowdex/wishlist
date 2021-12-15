@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast'
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
   const [authenticatedState, setAuthenticatedState] = useState('not-authenticated')
+  const [loading, setLoading] = useState(false)
   const [user, setUser] = useState(null)
 
   useEffect(() => {
@@ -15,6 +16,9 @@ function MyApp({ Component, pageProps }) {
       handleAuthChange(event, session)
       if (event === 'SIGNED_IN') {
         setAuthenticatedState('authenticated')
+        setLoading(true)
+        checkUser()
+        setLoading(false)
         router.push('/settings')
       }
       if (event === 'SIGNED_OUT') {
@@ -43,8 +47,10 @@ function MyApp({ Component, pageProps }) {
   }
 
   return (
-    <div className="h-screen overflow-scroll" style={{backgroundColor:user?.user_metadata.color??"#F5F5F4"}}>
-      {(authenticatedState === "authenticated")
+    <div className="h-screen overflow-scroll bg-gradient-to-r from-rose-100 to-indigo-100" style={{backgroundColor:user?.user_metadata.color??null}}>
+      { loading 
+        ? <p className="default-bg">Loading...</p>
+      : <div> {(authenticatedState === "authenticated" && user)
       ? <nav className="flex flex-wrap mt-4 justify-between items-center px-16 py-3 fixed w-full">
         <Link href="/edit-list">
           <button className="font-bold w-full sm:w-36"> edit list </button>
@@ -80,8 +86,8 @@ function MyApp({ Component, pageProps }) {
               }}
             />
       <div>
-        <Component {...pageProps} />
-      </div>
+         <Component {...pageProps} /> 
+      </div> </div> }
     </div>
   )
 }

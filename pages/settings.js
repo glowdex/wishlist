@@ -88,6 +88,8 @@ export default function Settings({ user }) {
   }
 
   return (
+    <div>
+      {loading ? <p className="default-bg">Loading...</p> :
     <div className="h-screen overflow-scroll" style={{backgroundColor:color}}>
       <div className="default-bg">
         <div className="default-card">
@@ -102,7 +104,7 @@ export default function Settings({ user }) {
             <input onChange={e => setUsername(e.target.value)} type="text" className="default-input mr-3" placeholder="new username" />
           </div>
           <p className="text-sm mb-1"> change profile color </p>
-          <p className="text-xs italic text-gray-500 mb-3"> will be used for the background color of your list!</p>
+          <p className="text-xs italic text-gray-500 mb-3"> will be used for the background color of your list! the color will show once you add your first item. </p>
 
           <div className="flex items-center mb-8">
             <div className="mr-5">
@@ -115,6 +117,7 @@ export default function Settings({ user }) {
           </div>
         </div>
       </div>
+    </div> }
     </div>
   )
 }

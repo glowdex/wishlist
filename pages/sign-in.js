@@ -42,11 +42,13 @@ export default function SignIn({ user }) {
     <div className="default-bg">
       <div className="default-card">
         
-        <h1 className="font-bold text-2xl mb-3"> sign in </h1>
-        <p className="text-sm text-gray-500 mb-5"> enter your email and we&apos;ll send you a magic link to log in / sign up! </p>
+        <h1 className="font-display italic text-4xl mb-3"> sign in </h1>
+        <p className="text-sm text-gray-500 mb-5"> enter your email and we&apos;ll send you a magic link to log in or sign up. </p>
         <form onSubmit={signIn}>
           <input onChange={e => setEmail(e.target.value)}
           type="email" className="default-input" placeholder="Your email"/>
+          <p className="text-xs italic text-gray-500 mt-3"></p>
+          
           <p className="text-xs italic text-gray-500 mt-3"> p.s. we&apos;ll never send you marketing emails or use this address for anything other than for logging in. </p>
           <button type="submit" className="button mt-5">sign in</button>
         </form>

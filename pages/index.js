@@ -1,16 +1,21 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import ItemCard from '../components/item-card'
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-scroll" style={{backgroundColor:"#F5F5F4"}}>
+    <div className="h-screen overflow-scroll">
+    <Head>
+      <title>The Get List.</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <div className="md:grid md:grid-cols-2 pt-12">
-      <div className="md:col-span-1 px-20 pt-36 pb-12 sm:py-36">
-        <h1 className="text-6xl font-bold mb-6">
-          a list of pretty things ✨
+      <div className="md:col-span-1 px-8 sm:px-20 pt-36 pb-12 sm:py-36">
+        <h1 className="text-7xl mb-6 font-display italic">
+          the get list. 
         </h1>
         <p className="text-sm text-gray-700">
-          a simple, no-fuss wishlist for beauty lovers.
+          a simple, no-fuss wishlist for beauty lovers. <br />
           get a url to share on your profile (perfect for the holidays! 🎄🎁)
         </p>
         <div className="flex mt-8">
@@ -20,17 +25,20 @@ export default function Home() {
             </Link>
         </div>  
         <div className="mt-12">
-          <p className="text-sm">a project by @glowdexapp</p>
+          <p className="text-sm inline">a project by </p><a href="https://www.instagram.com/glowdexapp/" target="_blank" rel="noopener noreferrer"><p className="underline cursor-pointer text-sm inline">@glowdexapp</p></a>
+        </div>
+        <div className="mt-1">
+          <p className="text-xs inline">name by </p><a href="https://www.instagram.com/ice2ooo/" target="_blank" rel="noopener noreferrer"><p className="underline cursor-pointer text-xs inline">@ice2ooo</p></a> <p className="inline text-xs">♡</p>
         </div>
       </div>
       <div className="my-20 md:col-span-1 flex justify-center items-center">
         <div className="default-card px-0 py-6"> 
           <div className="flex px-10 mb-3">
             <div className="w-14">
-              <div className="w-14 h-14 bg-rose-50 rounded-full pt-1 text-3xl flex items-center justify-center">🐰</div>
+              <div className="w-14 h-14 bg-rose-100 rounded-full pt-1 text-3xl flex items-center justify-center">🐰</div>
             </div>
             <div className="ml-5">
-              <h3 className="text-lg font-bold">@glossjelly8</h3>
+              <h3 className="text-lg font-bold">@glossjelly</h3>
               <p className="text-gray-500 text-sm">5 items</p>
             </div>
           </div>
