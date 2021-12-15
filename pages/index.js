@@ -15,6 +15,7 @@ export default function Home() {
       name="twitter:card"
       content="summary || summary_large_image || player || app"
     />
+      <meta name="twitter:image" content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png"></meta>
     </Head>
     <div className="md:grid md:grid-cols-2 pt-12">
       <div className="md:col-span-1 px-8 sm:px-20 pt-36 pb-12 sm:py-36">
