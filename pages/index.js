@@ -13,7 +13,7 @@ export default function Home() {
       content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png"/>
       <meta
       name="twitter:card"
-      content="summary || summary_large_image || player || app"
+      content="summary_large_image"
     />
       <meta name="twitter:image" content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png"></meta>
     </Head>
