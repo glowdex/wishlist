@@ -11,10 +11,11 @@ export default function Home() {
       <meta
       property="og:image"
       content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png"/>
-      <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@glowdexapp">
+      <meta name="twitter:creator" content="@glowdexapp">
+      <meta name="twitter:title" content="The Get List.">
+      <meta name="twitter:description" content="a simple, no-fuss wishlist for beauty lovers. get a url to share on your profile for the holidays! 🎁">
       <meta name="twitter:image" content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png"></meta>
     </Head>
     <div className="md:grid md:grid-cols-2 pt-12">
