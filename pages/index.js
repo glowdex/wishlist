@@ -17,7 +17,7 @@ export default function Home() {
       <meta name="twitter:title" content="The Get List." />
       <meta name="twitter:description" content="a simple, no-fuss wishlist for beauty lovers. get a url to share on your profile for the holidays! 🎁" />
       <meta name="twitter:image" content="https://blog.glowdexapp.com/wp-content/uploads/2021/12/sitepreview.png" />
-      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5f652cf391a74430bdf5763d3942e975"}'></script><!-- End Cloudflare Web Analytics -->
+      <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5f652cf391a74430bdf5763d3942e975"}'></script>
     </Head>
     <div className="md:grid md:grid-cols-2 pt-12">
       <div className="md:col-span-1 px-8 sm:px-20 pt-36 pb-12 sm:py-36">
