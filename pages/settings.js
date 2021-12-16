@@ -49,7 +49,7 @@ export default function Settings({ user }) {
 
       const updates = {
         id: user.id,
-        username: username,
+        username: username.toLowerCase(),
         color: color,
       }
 
