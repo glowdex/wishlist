@@ -38,7 +38,7 @@ export default function Home() {
           <p className="text-sm inline">a project by </p><a href="https://www.instagram.com/glowdexapp/" target="_blank" rel="noopener noreferrer"><p className="underline cursor-pointer text-sm inline">@glowdexapp</p></a>
         </div>
         <div className="mt-1">
-          <p className="text-xs inline">name by </p><a href="https://www.instagram.com/ice2ooo/" target="_blank" rel="noopener noreferrer"><p className="underline cursor-pointer text-xs inline">@ice2ooo</p></a> <p className="inline text-xs">♡</p>
+          <p className="text-xs inline">name by </p><a href="https://www.instagram.com/lookatmylids/" target="_blank" rel="noopener noreferrer"><p className="underline cursor-pointer text-xs inline">@lookatmylids</p></a> <p className="inline text-xs">♡</p>
         </div>
       </div>
       <div className="my-20 md:col-span-1 flex justify-center items-center">
